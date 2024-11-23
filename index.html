@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Marker</title>
+    <link rel="shortcut icon" href="imgs/logo.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- CSS Main File -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- alert -->
+    <div id="my-alert" class="d-none position-fixed top-0 start-0 end-0 bottom-0">
+      <div
+        class="bg-white p-4 rounded-2 inner position-absolute start-50 top-50 translate-middle"
+        id="inner-alert"
+      >
+        <div
+          class="icons d-flex justify-content-between align-items-center mb-3"
+        >
+          <div class="circles d-flex">
+            <span
+              class="bg-danger rounded-circle d-block me-1"
+              style="width: 20px; height: 20px"
+            ></span>
+            <span
+              class="bg-warning rounded-circle d-block me-1"
+              style="width: 20px; height: 20px"
+            ></span>
+            <span
+              class="bg-success rounded-circle d-block me-1"
+              style="width: 20px; height: 20px"
+            ></span>
+          </div>
+          <i class="fa-solid fa-xmark fa-xl cursor-pointer" id="close"></i>
+        </div>
+        <div class="content">
+          <h4 class="mb-3">
+            Site Name or Url is not valid, Please follow the rules below :
+          </h4>
+          <p>
+            <i class="fa-regular fa-circle-right"></i>
+            Site name must contain at least 3 characters
+          </p>
+          <p>
+            <i class="fa-regular fa-circle-right"></i>
+            Site URL must be a valid one
+          </p>
+        </div>
+      </div>
+      <div
+        class="vh-100 position-absolute d-flex justify-content-center align-items-center"
+        id="alert-bg"
+      ></div>
+    </div>
+    <!-- App -->
+    <div class="container">
+      <div class="header">
+        <h1>Bookmarker</h1>
+      </div>
+
+      <div class="form px-3">
+        <h3>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+        <div class="mb-3">
+          <label for="name" class="form-label"
+            ><i class="fa-solid fa-book-bookmark me-1"></i> Site Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Bookmark Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="site-url" class="form-label"
+            ><i class="fa-solid fa-link me-1"></i> Site URL</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="url"
+            placeholder="Website URL"
+          />
+        </div>
+        <button id="submit" class="d-block mx-auto rounded-2 px-5 py-2 my-4">
+          Submit
+        </button>
+      </div>
+
+      <div class="table-responsive my-4">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Bootstrap Library Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JS Main File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+<!-- End  Code -->
